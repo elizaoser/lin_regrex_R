@@ -1,4 +1,17 @@
-filename = "regrex1.csv"
+options(echo=TRUE) 
+args <- commandArgs(trailingOnly = TRUE)
+print(args)
+
+print("Running linear modelling of data r script")
+
+
+# # Set notebook variables
+if (length(args) < 1){
+    print("Missing filename")
+    quit(save='yes',status=-1)
+    }
+
+filename = args[1]
 
 dataset = read.csv(filename)
 dataset
